@@ -1,14 +1,8 @@
 'use strict';
 
-class FeedIndex {
-  constructor() {
-    this._index = {};
-  }
+const EventIndex = require('orbit-db-eventstore/src/EventIndex');
 
-  get() {
-    return Object.keys(this._index).map((f) => this._index[f]);
-  }
-
+class FeedIndex extends EventIndex {
   updateIndex(oplog, added) {
     added.reduce((handled, item) => {
       if(handled.indexOf(item.hash) === -1) {
