@@ -6,7 +6,8 @@ const FeedIndex  = require('./FeedIndex');
 
 class FeedStore extends EventStore {
   constructor(ipfs, id, dbname, options) {
-    Object.assign(options || {}, { Index: FeedIndex });
+    if(!options) options = {};
+    if(!options.Index) Object.assign(options, { Index: FeedIndex });
     super(ipfs, id, dbname, options)
   }
 
