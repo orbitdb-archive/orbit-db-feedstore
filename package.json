@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "lazy.js": "^0.4.2",
-    "orbit-db-eventstore": "0.0.20"
+    "orbit-db-eventstore": "0.1.0"
   }
 }
