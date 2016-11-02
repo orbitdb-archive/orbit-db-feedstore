@@ -6,9 +6,17 @@ A log database with traversable history. Entries can be added and removed. Usefu
 
 Used in [orbit-db](https://github.com/haadcode/orbit-db).
 
+## Table of Contents
+
+- [Install](#install)
+- [Usage](#usage)
+- [API](#api)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Install
 ```
-npm install orbit-db
+npm install orbit-db ipfs
 ```
 
 ## Usage
