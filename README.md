@@ -58,48 +58,7 @@ feed.events.on('ready', () => {
 
 ## API
 
-### feed(name)
-
-  Package: 
-  [orbit-db-feedstore](https://github.com/haadcode/orbit-db-feedstore)
-
-  ```javascript
-  const db = orbitdb.feed('orbit-db.issues')
-  ```
-
-  - **add(data)**
-    ```javascript
-    db.add({ name: 'User1' }).then((hash) => ...)
-    ```
-    
-  - **get(hash)**
-    ```javascript
-    const event = db.get(hash)
-      .map((e) => e.payload.value)
-    // { name: 'User1' }
-    ```
-    
-  - **iterator([options])**
-    ```javascript
-    // TODO: add all options - gt, gte, lt, lte, limit, reverse
-    const all = db.iterator({ limit: -1 })
-      .collect()
-      .map((e) => e.payload.value)
-    // [{ name: 'User1' }]
-    ```
-
-  - **remove(hash)**
-    ```javascript
-    db.remove(hash).then((removed) => ...)
-    ```
-    
-  - **events**
-
-    ```javascript
-    db.events.on('data', (dbname, event) => ... )
-    ```
-
-  See [Events](https://github.com/haadcode/orbit-db-store#events) for full description
+See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/master/API.md#feedstorename) for full details.
 
 ## Contributing
 
