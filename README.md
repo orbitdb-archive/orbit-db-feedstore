@@ -58,7 +58,7 @@ feed.events.on('ready', () => {
 
 ## API
 
-See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/master/API.md#feedstorename) for full details.
+See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/master/API.md#feedname) for full details.
 
 ## Contributing
 
