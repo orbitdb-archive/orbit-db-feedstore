@@ -14,10 +14,7 @@ class FeedStore extends EventStore {
     const operation = {
       op: 'DEL',
       key: null,
-      value: hash,
-      meta: {
-        ts: new Date().getTime()
-      }
+      value: hash
     }
     return this._addOperation(operation)
   }
