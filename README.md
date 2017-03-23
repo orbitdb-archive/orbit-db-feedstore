@@ -38,9 +38,12 @@ const feed = orbitdb.feed('haad.posts')
 feed.add({ title: 'Hello', content: 'World' })
   .then(() => {
     const posts = feed.iterator().collect()
-    posts.forEach((post) => console.log(post.title + '\n', post.content))    
-    // Hello 
-    // World  
+    posts.forEach((post) => {
+      let data = post.payload.value
+      console.log(data.title + '\n', data.content)
+      // Hello 
+      //  World   
+    })
   })
 ```
 
