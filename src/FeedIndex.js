@@ -10,7 +10,8 @@ class FeedIndex {
   }
 
   updateIndex(oplog) {
-    oplog.items.reduce((handled, item) => {
+    this._index = {}
+    oplog.values.reduce((handled, item) => {
       if(!handled.includes(item.hash)) {
         handled.push(item.hash)
         if(item.payload.op === 'ADD') {
