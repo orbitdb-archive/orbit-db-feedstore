@@ -1,6 +1,9 @@
 # orbit-db-feedstore
 
 [![npm version](https://badge.fury.io/js/orbit-db-feedstore.svg)](https://badge.fury.io/js/orbit-db-feedstore)
+[]![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/orbitdb/Lobby)
+
+> Log database for orbit-db
 
 A log database with traversable history. Entries can be added and removed. Useful for *"shopping cart"* type of use cases, or for example as a feed of blog posts or *"tweets"*.
 
@@ -15,7 +18,10 @@ Used in [orbit-db](https://github.com/haadcode/orbit-db).
 - [License](#license)
 
 ## Install
-```
+
+This project uses [npm](https://npmjs.com) and [node](https://nodejs.org)
+
+```sh
 npm install orbit-db ipfs
 ```
 
@@ -41,7 +47,7 @@ feed.add({ title: 'Hello', content: 'World' })
     posts.forEach((post) => {
       let data = post.payload.value
       console.log(data.title + '\n', data.content)
-      // Hello 
+      // Hello
       //  World   
     })
   })
@@ -54,18 +60,20 @@ const feed = orbitdb.feed('haad.posts')
 feed.events.on('ready', () => {
   const posts = feed.iterator().collect()
   posts.forEach((post) => console.log(post.title + '\n', post.content))
-  // Hello 
+  // Hello
   // World  
 })
 ```
 
 ## API
 
-See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/master/API.md#feedname) for full details.
+See [orbit-db's API Documenations](https://github.com/orbitdb/orbit-db/blob/master/API.md#feedname) for full details.
 
 ## Contributing
 
-See [orbit-db's contributing guideline](https://github.com/haadcode/orbit-db#contributing).
+If you think this could be better, please [open an issue](https://github.com/orbitdb/orbit-db-feedstore/issues/new)!
+
+Please note that all interactions in [@orbitdb](https://github.com/orbitdb) fall under our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 

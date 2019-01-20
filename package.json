@@ -3,10 +3,30 @@
   "version": "1.4.0",
   "description": "Feed store for orbit-db",
   "main": "src/FeedStore.js",
+  "homepage": "https://github.com/orbitdb/orbit-db-feedstore",
+  "bugs": "https://github.com/orbitdb/orbit-db-feedstore/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orbitdb/orbit-db-feedstore"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords":[
+    "orbit-db",
+    "orbitdb",
+    "database",
+    "log-database"
+  ],
   "author": "Haad",
+  "contributors": [
+    "haadcode",
+    "greenkeeperio-bot",
+    "shamb0t",
+    "RichardLitt",
+    "MartianH",
+    "adam-palazzo"
+  ],
   "license": "MIT",
   "dependencies": {
     "orbit-db-eventstore": "github:orbitdb/orbit-db-eventstore"
