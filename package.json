@@ -12,7 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords":[
+  "keywords": [
     "orbit-db",
     "orbitdb",
     "database",
@@ -29,6 +29,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-eventstore": "next"
+    "orbit-db-eventstore": "github:orbitdb/orbit-db-eventstore#cid-to-hash"
   }
 }
