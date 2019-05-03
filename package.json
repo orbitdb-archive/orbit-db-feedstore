@@ -1,6 +1,6 @@
 {
   "name": "orbit-db-feedstore",
-  "version": "1.5.0-rc3",
+  "version": "1.5.0",
   "description": "Feed store for orbit-db",
   "main": "src/FeedStore.js",
   "homepage": "https://github.com/orbitdb/orbit-db-feedstore",
@@ -12,7 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords":[
+  "keywords": [
     "orbit-db",
     "orbitdb",
     "database",
@@ -29,6 +29,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-eventstore": "next"
+    "orbit-db-eventstore": "~1.5.0"
   }
 }
