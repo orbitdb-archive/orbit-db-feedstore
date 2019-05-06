@@ -1,6 +1,6 @@
 {
   "name": "orbit-db-feedstore",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Feed store for orbit-db",
   "main": "src/FeedStore.js",
   "homepage": "https://github.com/orbitdb/orbit-db-feedstore",
