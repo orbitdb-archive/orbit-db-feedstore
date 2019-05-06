@@ -9,6 +9,6 @@
   "author": "Haad",
   "license": "MIT",
   "dependencies": {
-    "orbit-db-eventstore": "orbitdb/orbit-db-eventstore#patch/1.4.1"
+    "orbit-db-eventstore": "~1.4.1"
   }
 }
