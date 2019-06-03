@@ -34,13 +34,13 @@ const IPFS = require('ipfs')
 const OrbitDB = require('orbit-db')
 
 const ipfs = new IPFS()
-const orbitdb = new OrbitDB(ipfs)
+const orbitdb = await OrbitDB.createInstance(ipfs)
 ```
 
 Get a feed database and add an entry to it:
 
 ```javascript
-const feed = orbitdb.feed('haad.posts')
+const feed = await orbitdb.feed('haad.posts')
 feed.add({ title: 'Hello', content: 'World' })
   .then(() => {
     const posts = feed.iterator().collect()
@@ -56,7 +56,7 @@ feed.add({ title: 'Hello', content: 'World' })
 Later, when the database contains data, load the history and query when ready:
 
 ```javascript
-const feed = orbitdb.feed('haad.posts')
+const feed = await orbitdb.feed('haad.posts')
 feed.events.on('ready', () => {
   const posts = feed.iterator().collect()
   posts.forEach((post) => console.log(post.title + '\n', post.content))
