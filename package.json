@@ -29,6 +29,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-eventstore": "~1.5.0"
+    "orbit-db-eventstore": "github:orbitdb/orbit-db-eventstore#feat/ipfs-0.36.x"
   }
 }
