@@ -30,5 +30,10 @@
   "license": "MIT",
   "dependencies": {
     "orbit-db-eventstore": "next"
-  }
+  },
+  "localMaintainers": [
+    "haad <haad@haja.io>",
+    "shamb0t <shams@haja.io>",
+    "hajamark <mark@haja.io>"
+  ]
 }
