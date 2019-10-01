@@ -29,7 +29,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-eventstore": "~1.6.0"
+    "orbit-db-eventstore": "orbitdb/orbit-db-eventstore#feat/identities"
   },
   "localMaintainers": [
     "haad <haad@haja.io>",
