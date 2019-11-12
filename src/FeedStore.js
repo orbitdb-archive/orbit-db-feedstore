@@ -11,6 +11,7 @@ class FeedStore extends EventStore {
     this._type = 'feed'
   }
 
+
   remove (hash) {
     return this.del(hash)
   }
@@ -22,6 +23,14 @@ class FeedStore extends EventStore {
       value: hash
     }
     return this._addOperation(operation)
+  }
+
+  static async create (ipfs, identity, address, options) {
+    const heads = await Store.loadHeadsFromCache(options.cache, address)
+    if (heads.length > 0) {
+      options = Object.assign(options, { heads })
+    }
+    return new FeedStore(ipfs, identity, address, options)
   }
 }
 
