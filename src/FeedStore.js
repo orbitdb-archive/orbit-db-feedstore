@@ -1,5 +1,6 @@
 'use strict'
 
+const Store = require('orbit-db-store')
 const EventStore = require('orbit-db-eventstore')
 const FeedIndex  = require('./FeedIndex')
 
@@ -26,7 +27,7 @@ class FeedStore extends EventStore {
   }
 
   static async create (ipfs, identity, address, options) {
-    const heads = await Store.loadHeadsFromCache(options.cache, address)
+    const heads = await FeedStore.loadHeadsFromCache(options.cache, address)
     if (heads.length > 0) {
       options = Object.assign(options, { heads })
     }
