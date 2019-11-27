@@ -11,17 +11,17 @@ class FeedStore extends EventStore {
     this._type = 'feed'
   }
 
-  remove (hash) {
-    return this.del(hash)
+  remove (hash, options = {}) {
+    return this.del(hash, options)
   }
 
-  del (hash) {
+  del (hash, options = {}) {
     const operation = {
       op: 'DEL',
       key: null,
       value: hash
     }
-    return this._addOperation(operation)
+    return this._addOperation(operation, options)
   }
 }
 
