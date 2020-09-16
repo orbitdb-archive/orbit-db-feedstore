@@ -1,6 +1,6 @@
 {
   "name": "orbit-db-feedstore",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "Feed store for orbit-db",
   "main": "src/FeedStore.js",
   "homepage": "https://github.com/orbitdb/orbit-db-feedstore",
@@ -29,7 +29,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-eventstore": "~1.11.0"
+    "orbit-db-eventstore": "~1.12.0"
   },
   "localMaintainers": [
     "haad <haad@haja.io>",
