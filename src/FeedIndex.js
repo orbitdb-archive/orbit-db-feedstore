@@ -1,22 +1,20 @@
-'use strict'
-
-class FeedIndex {
-  constructor() {
+export default class FeedIndex {
+  constructor () {
     this._index = {}
   }
 
-  get() {
+  get () {
     return Object.keys(this._index).map((f) => this._index[f])
   }
 
-  updateIndex(oplog) {
+  updateIndex (oplog) {
     this._index = {}
     oplog.values.reduce((handled, item) => {
-      if(!handled.includes(item.hash)) {
+      if (!handled.includes(item.hash)) {
         handled.push(item.hash)
-        if(item.payload.op === 'ADD') {
+        if (item.payload.op === 'ADD') {
           this._index[item.hash] = item
-        } else if(item.payload.op === 'DEL') {
+        } else if (item.payload.op === 'DEL') {
           delete this._index[item.payload.value]
         }
       }
@@ -24,5 +22,3 @@ class FeedIndex {
     }, [])
   }
 }
-
-module.exports = FeedIndex
