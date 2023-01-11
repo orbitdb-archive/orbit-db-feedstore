@@ -31,7 +31,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-eventstore": "github:orbitdb/orbit-db-eventstore#esm"
+    "orbit-db-eventstore": "next"
   },
   "localMaintainers": [
     "haad <haad@haja.io>",
