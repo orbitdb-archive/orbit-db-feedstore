@@ -1,12 +1,10 @@
-'use strict'
+import EventStore from 'orbit-db-eventstore'
+import FeedIndex from './FeedIndex.js'
 
-const EventStore = require('orbit-db-eventstore')
-const FeedIndex  = require('./FeedIndex')
-
-class FeedStore extends EventStore {
+export default class FeedStore extends EventStore {
   constructor (ipfs, id, dbname, options) {
-    if(!options) options = {}
-    if(!options.Index) Object.assign(options, { Index: FeedIndex })
+    if (!options) options = {}
+    if (!options.Index) Object.assign(options, { Index: FeedIndex })
     super(ipfs, id, dbname, options)
     this._type = 'feed'
   }
@@ -24,5 +22,3 @@ class FeedStore extends EventStore {
     return this._addOperation(operation, options)
   }
 }
-
-module.exports = FeedStore
